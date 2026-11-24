@@ -1,0 +1,17 @@
+{
+  "providerId": "chickensign.com",
+  "providerName": "ChickenSign",
+  "serviceId": "custom-domain",
+  "serviceName": "Branded signing links",
+  "version": 1,
+  "syncPubKeyDomain": "chickensign.com",
+  "syncRedirectDomain": "chickensign.com",
+  "hostRequired": true,
+  "logoUrl": "https://chickensign.com/logo.png",
+  "description": "Send signing links from your own domain",
+  "variableDescription": "token: per-account ownership token",
+  "records": [
+    { "type": "TXT", "host": "_chickensign", "data": "chickensign-verify=%token%", "ttl": 3600, "txtConflictMatchingMode": "All" },
+    { "type": "CNAME", "host": "@", "pointsTo": "custom.chickensign.com", "ttl": 3600 }
+  ]
+}
